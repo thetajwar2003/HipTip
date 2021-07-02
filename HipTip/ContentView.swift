@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var amount = ""
+    @State private var ppl = ""
     @State private var currentTipIndex = 2
     
     let tipPercentages = [0, 10, 15, 20, 25]
@@ -21,12 +22,26 @@ struct ContentView: View {
         return amountNum * (1 + tipPercent)
     }
     
+    var totalPerPerson: Double {
+        let numOfPeople = Double(ppl) ?? 1
+        let tipPercent = Double(tipPercentages[currentTipIndex])/100
+        // converts amount to double if it exists otherwise it will be $0.00
+        let amountNum = Double(amount) ?? 0
+       
+        let total = amountNum * (1 + tipPercent)
+        let perPerson = total / numOfPeople
+       
+        return perPerson
+
+    }
+    
     var body: some View {
         NavigationView{
             Form {
-                // section to enter amount
+                // section to enter amount and number of people to split with
                 Section {
                     TextField("Amount", text: $amount).keyboardType(.decimalPad)
+                    TextField("Number of people", text: $ppl).keyboardType(.numberPad)
                 }
                 
                 // section to select tip amount
@@ -40,6 +55,10 @@ struct ContentView: View {
                 // section that displays total amount with tip
                 Section(header: Text("Total Amount")) {
                     Text("$\(total, specifier: "%.2f")").foregroundColor(tipPercentages[currentTipIndex] == 0 ? .red : .black)
+                }
+                // section that displays total amount with tip per person
+                Section(header: Text("Total Amount Per Person")) {
+                    Text("$\(totalPerPerson, specifier: "%.2f")")
                 }
             }.navigationTitle(Text("HipTip"))
         }
