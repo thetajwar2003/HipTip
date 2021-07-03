@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6872ACCD2690AE3000883072 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6872ACCC2690AE3000883072 /* Settings.swift */; };
 		68CF58B2268F4FC8003F099E /* HipTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CF58B1268F4FC8003F099E /* HipTipApp.swift */; };
 		68CF58B4268F4FC8003F099E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CF58B3268F4FC8003F099E /* ContentView.swift */; };
 		68CF58B6268F4FC9003F099E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CF58B5268F4FC9003F099E /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6872ACCC2690AE3000883072 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		68CF58AE268F4FC8003F099E /* HipTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CF58B1268F4FC8003F099E /* HipTipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipTipApp.swift; sourceTree = "<group>"; };
 		68CF58B3268F4FC8003F099E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		68CF58B0268F4FC8003F099E /* HipTip */ = {
 			isa = PBXGroup;
 			children = (
+				6872ACCC2690AE3000883072 /* Settings.swift */,
 				68CF58B1268F4FC8003F099E /* HipTipApp.swift */,
 				68CF58B3268F4FC8003F099E /* ContentView.swift */,
 				68CF58B5268F4FC9003F099E /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6872ACCD2690AE3000883072 /* Settings.swift in Sources */,
 				68CF58B4268F4FC8003F099E /* ContentView.swift in Sources */,
 				68CF58B2268F4FC8003F099E /* HipTipApp.swift in Sources */,
 			);
