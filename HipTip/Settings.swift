@@ -16,6 +16,7 @@ struct Settings: View {
                     Toggle("Dark Mode", isOn: $darkMode)
                 }
             }.navigationBarTitle("Settings", displayMode: .inline)
+            Spacer()
         }
     }
 }
